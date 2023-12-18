@@ -13,6 +13,11 @@
             <div><%= message %></div>
         <% end %>
     </div>
+
+    <div>
+        <%= form.label :status %>
+        <%= form.select :status, Visible::VALID_STATUSES, selected: article.status || 'public' %>
+    </div>
     <div>
         <%= form.submit %>
     </div>
